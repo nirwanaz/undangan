@@ -9,13 +9,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+</head>
+<body>
 	<style type="text/css">
 		section {
 			margin-top: 50px;
 		}
+		.text-banner {
+			padding-top: 220px;
+		}
+		@media only screen and (min-width: 876px), (max-width: 976px){
+			.text-banner {
+				padding-top: 120px;
+			}
+		}
+		@media only screen and (max-width: 370px) {
+			.text-banner {
+				padding-top: 0;
+			}
+		}
 	</style>
-</head>
-<body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container">
 			<a class="navbar-brand" href="#">iniundanganmu</a>
@@ -57,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="container">
 				<div class="row">
 					<div class="col-md">
-						<div class="text-banner" style="padding-top: 220px;">
+						<div class="text-banner">
 							<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -80,10 +93,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="row">
 					<div class="col-md">
 						<h1 style="text-transform: capitalize;" class="text-center">contoh template undangan pernikahan online</h1>
-						<div class="row">
+						<div class="d-flex" style="overflow-x: scroll;">
 							<?php foreach(range(1,5) as $number) { ?>
-							<div class="col-md-2">
-								<div class="card my-2">
+							<div class="col-md-3 col-lg-2">
+								<div class="card m-2">
 									<img 
 										src="https://cdn.pixabay.com/photo/2022/01/02/22/06/couple-6911271_960_720.png" 
 										alt="card-img"
@@ -96,8 +109,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div>
 							</div>
 							<?php } ?>
-							<div class="col-md-2">
-								<div class="card my-2">
+							<div class="col-md-3 col-lg-2">
+								<div class="card m-2">
 									<img 
 										src="https://cdn.pixabay.com/photo/2015/11/03/08/56/question-mark-1019820_960_720.jpg" 
 										alt="card-img"

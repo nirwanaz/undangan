@@ -3,21 +3,21 @@
         <div class="row">
             <div class="col-md">
                 <div class="d-flex countdown justify-content-center">
-                   <ul class="text-center display-6 list-inline">
-                       <li class="list-inline-item p-2">
-                           <span class="d-block display-5" id="days"></span>
+                   <ul class="text-center text-white list-inline">
+                       <li class="list-inline-item p-4 bg-dark">
+                           <span class="d-block display-3" id="days"></span>
                            days
                        </li>
-                       <li class="list-inline-item p-2">
-                           <span class="d-block display-5" id="hours"></span>
+                       <li class="list-inline-item p-4 bg-dark">
+                           <span class="d-block display-3" id="hours"></span>
                            hours
                        </li>
-                       <li class="list-inline-item p-2">
-                           <span class="d-block display-5" id="minutes"></span>
+                       <li class="list-inline-item p-4 bg-dark">
+                           <span class="d-block display-3" id="minutes"></span>
                            minutes
                        </li>
-                       <li class="list-inline-item p-2">
-                           <span class="d-block display-5" id="seconds"></span>
+                       <li class="list-inline-item p-4 bg-dark">
+                           <span class="d-block display-3" id="seconds"></span>
                            seconds
                        </li>
                    </ul>
@@ -55,11 +55,13 @@
                         hours = (distance % day) / hour,
                         minutes = (distance % hour) / minute,
                         seconds = (distance % minute) / second;
+                  let dayString = Math.floor(days).toString(),
+                      hourString = Math.floor(hours).toString(),
+                      minuteString = Math.floor(minutes).toString()
 
-                  console.log(countDown, now);
-                  document.getElementById("days").innerText = Math.floor(days),
-                  document.getElementById("hours").innerText = Math.floor(hours),
-                  document.getElementById("minutes").innerText = Math.floor(minutes),
+                  document.getElementById("days").innerText = dayString.length == 1 ? '0'+dayString : dayString,
+                  document.getElementById("hours").innerText = hourString.length == 1 ? '0'+hourString : hourString,
+                  document.getElementById("minutes").innerText = minuteString.length == 1 ? '0'+minuteString : minuteString,
                   document.getElementById("seconds").innerText = Math.floor(seconds);
 
                   if (distance < 0 ) {

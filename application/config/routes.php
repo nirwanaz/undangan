@@ -54,3 +54,8 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['theme/(:num)'] = 'theme/index/$1';
+$route['admin'] = function() {
+    header('location: dashboard');
+};
+$route['admin/dashboard'] = 'dashboard/index';
+$route['admin/order'] = 'order/displayAddOrder';

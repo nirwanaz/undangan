@@ -201,3 +201,6 @@
         </div>
     </div>
 </section>
+<?php $this->load->view($map) ?>
+<?php $this->load->view('/component/countdown') ?>
+<?php $this->load->view('/component/videoplayer') ?>

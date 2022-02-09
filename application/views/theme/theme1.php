@@ -59,7 +59,7 @@
                         class="w-100"
                         style="object-fit: cover; object-position: 0 80px"
                         height="300"
-                        src="../assets/image/couple.jpg"
+                        src="<?php echo base_url('assets/image/couple.jpg') ?>"
                         alt="img-upper"
                     >
                     <h3>Romeo And Juliette</h3>

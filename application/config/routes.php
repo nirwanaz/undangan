@@ -55,7 +55,11 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['theme/(:num)'] = 'theme/index/$1';
 $route['admin'] = function() {
-    header('location: dashboard');
+    header('location: admin/dashboard');
 };
-$route['admin/dashboard'] = 'dashboard/index';
-$route['admin/order'] = 'order/displayAddOrder';
+$route['admin/dashboard'] = 'admin/dashboard';
+$route['admin/order'] = 'admin/order';
+$route['admin/order/create'] = 'admin/order/create';
+
+// Route Client
+$route['order'] = 'order';

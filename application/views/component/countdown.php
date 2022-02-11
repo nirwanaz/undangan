@@ -4,19 +4,19 @@
             <div class="col-md">
                 <div class="d-flex countdown justify-content-center">
                    <ul class="text-center text-white list-inline">
-                       <li class="list-inline-item p-4 bg-dark">
+                       <li class="list-inline-item p-2 bg-dark">
                            <span class="d-block display-3" id="days"></span>
                            days
                        </li>
-                       <li class="list-inline-item p-4 bg-dark">
+                       <li class="list-inline-item p-2 bg-dark">
                            <span class="d-block display-3" id="hours"></span>
                            hours
                        </li>
-                       <li class="list-inline-item p-4 bg-dark">
+                       <li class="list-inline-item p-2 bg-dark">
                            <span class="d-block display-3" id="minutes"></span>
                            minutes
                        </li>
-                       <li class="list-inline-item p-4 bg-dark">
+                       <li class="list-inline-item p-2 bg-dark">
                            <span class="d-block display-3" id="seconds"></span>
                            seconds
                        </li>

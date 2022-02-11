@@ -134,7 +134,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<h1 style="text-transform: capitalize;" class="text-center">fitur undangan pernikahan online</h1>
 						<div class="row">
 							<?php foreach(['countdown', 'guest-list', 'map', 'music', 'photo-album', 'schedule', 'video-player'] as $feature) {?>
-							<div class="col-sm-6 col-lg-3">
+							<div class="col-sm-4 col-lg-3">
 								<div class="card my-2">
 									<img 
 										src="<?php echo './assets/icons/feature/'.$feature.'.png' ?>" 
@@ -154,7 +154,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</section>
 		<section class="section-price">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md bg-warning p-3 rounded-3">
 						<div class="row justify-content-center">

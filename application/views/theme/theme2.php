@@ -22,8 +22,13 @@
         font-weight: normal;
         background: radial-gradient(50% 50% at 50% 50%, rgba(229, 229, 229, 0.76) 0%, rgba(229, 229, 229, 0.71) 41.15%, #FFFFFF 89.06%);
         background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
+    }
+
+    .m-caption {
+        margin-top: -60px;
     }
 
     .banner-title {
@@ -39,14 +44,6 @@
         font-weight: normal;
         font-style: normal;
         letter-spacing: 0.175em;
-    }
-
-    .bg-flower {
-        background: url('/proyek_undangan/assets/image/frame/flowers-6616117_640.png');
-        background-size: cover;
-        background-repeat: round;
-        background-position-x: 50px;
-        background-position-y: 100px;
     }
 
     .section-title {
@@ -88,11 +85,22 @@
         z-index: 2;
         width: 100%;
     }
+
+    @media only screen and (max-width: 576px) {
+        .banner-couple .caption {
+            font-size: 72px;
+            line-height: 90px;
+        }
+
+        .m-caption {
+            margin-top: -30px;
+        }
+    }
 </style>
 <section id="section-banner">
     <div class="container-fluid bg-couple">
-        <div class="row bg-flower">
-            <div class="col-md-12 text-center bg-linier p-4">
+        <div class="row">
+            <div class="col-md-12 col-12 text-center bg-linier p-4">
                 <div class="banner-title my-3">
                     <?php 
                         echo heading(humanize('save_the_date'), 2, 'class="display-5"'); 
@@ -102,23 +110,11 @@
                 <div class="banner-couple">
                     <?php
                         echo heading(humanize('romeo'), 1, 'class="caption"');
-                        echo heading('&amp;'.humanize('_juliette'), 1, 'class="caption" style="margin-top: -60px"');
+                        echo heading('&amp;'.humanize('_juliette'), 1, 'class="caption m-caption"');
                     ?>
                 </div>
                 <div class="banner-caption text-end px-4">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="date-text">
-                        <?php
-                            echo heading(humanize('sunday,_15_september_2022'), 4);
-                            echo heading(humanize('05_o\'clock_in_the_afternoon'), 6);
-                        ?>
-                    </div>
-                    <div class="locate-text">
-                        <?php
-                            echo heading(humanize('lac_resort'), 4);
-                            echo heading(humanize('123_lorem_ipsum_st._dolor'), 6);
-                        ?>
-                    </div>
                 </div>
             </div>
         </div>

@@ -9,14 +9,6 @@ class Order extends CI_Controller {
     }
 
     function index() {
-        $data['content'] = '/admin/orderIndex';
-
-        $this->load->view('template_admin', $data);
-    }
-
-    function displayAddOrder() {
-        $data['content'] = '/admin/order_create';
-
-        $this->load->view('template_admin', $data);
+        $this->load->view('/client/order_create');
     }
 }

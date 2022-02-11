@@ -18,7 +18,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="main" style="width: 100%; overflow-x: hidden">
 
             <?php $this->load->view($content) ?>
             

@@ -2,7 +2,7 @@
 <!-- theme1 -->
 <style type="text/css">
     .marriage-couple::before, .marriage-couple::after {
-        content: url('../assets/image/tulip.png');
+        content: url('/assets/image/tulip.png');
     }
 
     .marriage-couple {
@@ -10,7 +10,7 @@
     }
 
     .bg-eventlist {
-        background-image: url('../assets/image/cup.jpg');
+        background-image: url('/assets/image/cup.jpg');
         background-position: 0 -200px;
         background-size: cover;
         height: 200px;
@@ -59,7 +59,7 @@
                         class="w-100"
                         style="object-fit: cover; object-position: 0 80px"
                         height="300"
-                        src="<?php echo base_url('assets/image/couple.jpg') ?>"
+                        src="assets/image/couple.jpg'"
                         alt="img-upper"
                     >
                     <h3>Romeo And Juliette</h3>
@@ -67,7 +67,7 @@
                         class="w-100"
                         style="object-fit: cover; object-position: 0 -240px"
                         height="300"
-                        src="../assets/image/couple.jpg"
+                        src="assets/image/couple.jpg"
                         alt="img-midr"
                     >
                     <div class="d-flex date-ceremony justify-content-beetween">
@@ -75,7 +75,7 @@
                         <img
                             style="object-fit: cover;"
                             height="40"
-                            src="../assets/image/bell.png"
+                            src="assets/image/bell.png"
                             alt="img-bell"
                         >
                         <h3 class="w-100 text-end">Surabaya, INA</h3>
@@ -84,7 +84,7 @@
                         class="w-100"
                         style="object-fit: cover; object-position: 0 -540px"
                         height="300"
-                        src="../assets/image/couple.jpg"
+                        src="assets/image/couple.jpg"
                         alt="img-bottom"
                     >
                 </div>

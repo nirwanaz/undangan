@@ -8,49 +8,31 @@
                     data-bs-ride="carousel"
                     >
                     <div class="carousel-indicators">
+                        <?php foreach(range(0, sizeof($items) - 1) as $index) { ?>
                         <button 
                             type="button" 
                             data-bs-target="#carouselCaptions"
-                            data-bs-slide-to="0" 
-                            class="active" 
-                            aria-current="true"
-                            aria-label="Slide 1">
+                            data-bs-slide-to="<?php echo $index ?>" 
+                            class="<?php echo $index == 0 ? 'active' : ''?>" 
+                            aria-current="<?php echo $index == 0 ? 'true' : 'false'?>"
+                            aria-label="<?php echo humanize('slide_').($index+1) ?>">
                         </button>
-                        <button 
-                            type="button" 
-                            data-bs-target="#carouselCaptions"
-                            data-bs-slide-to="1" 
-                            aria-label="Slide 2">
-                        </button>
-                        <button 
-                            type="button" 
-                            data-bs-target="#carouselCaptions"
-                            data-bs-slide-to="2" 
-                            aria-label="Slide 3">
-                        </button>
+                        <?php } ?>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="..." alt="..." class="d-block w-100">
+                        <?php foreach($items as $item) { ?>
+                        <div class="carousel-item <?php echo $item['active'] ? 'active' : '' ?>">
+                            <?php 
+                                $carousel['src'] = $item['src'];
+                                $carousel['alt'] = $item['alt'];
+                                $carousel['class'] = "d-block w-100";
+                                echo img($carousel) ?>
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>First Slide</h5>
                                 <p>Lorem Ipsum Sit Dolor Amet</p>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="..." alt="..." class="d-block w-100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Second Slide</h5>
-                                <p>Lorem Ipsum Sit Dolor Amet</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." alt="..." class="d-block w-100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third Slide</h5>
-                                <p>Lorem Ipsum Sit Dolor Amet</p>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                     <button 
                         class="carousel-control-prev" 

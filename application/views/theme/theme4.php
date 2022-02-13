@@ -143,26 +143,7 @@
         </div>
     </div>
 </section>
-<?php
-    $data['items'] = [
-        [
-            'src' => 'https://cdn.pixabay.com/photo/2017/08/06/20/11/wedding-2595862_960_720.jpg',
-            'alt' => 'wedding1',
-            'active' => true
-        ],
-        [
-            'src' => 'https://cdn.pixabay.com/photo/2016/03/14/14/21/bride-1255520_960_720.jpg',
-            'alt' => 'wedding2',
-            'active' => false
-        ],
-        [
-            'src' => 'https://cdn.pixabay.com/photo/2016/11/18/18/32/wedding-1836315_960_720.jpg',
-            'alt' => 'wedding3',
-            'active' => false
-        ],
-    ];
-    $this->load->view('/component/carousel', $data) 
-    ?>
+
 <section id="section-profile" style="background-color: aliceblue;">
     <div class="container">
         <div class="row justify-content-center">
@@ -221,24 +202,49 @@
 <section class="section-event">
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-md-6 py-3 text-center">
-                <h1>acara pernikahan</h1>
-                <div class="event-wrapper">
-                    <div class="event-content">
-                       <h5>resepsi</h5>
-                    </div>
+            <div class="col-md-6 p-4 my-4 text-center border border-2 rounded-3">
+                <div class="event-header">
                     <?php
-                        $flower['src'] = 'assets/image/blue/flowers-geb6978fd4_640.png';
-                        $flower['alt'] = 'decor';
-                        $flower['class'] = 'event-img-decor';
-                        
-                        echo img($flower);
+                        $calender['src'] = 'assets/icons/feature/schedule.png';
+                        $calender['alt'] = 'calender';
+                        $calender['class'] = 'img-fluid';
+                        $calender['width'] = 100;
+                        $calender['height'] = 100;
+
+                        echo img($calender);
                     ?>
+                    <h1>acara pernikahan</h1>
                 </div>
+                <div class="event-content my-4">
+                    <h4>resepsi</h4>
+                    <h6>tanggal</h6>
+                    <h6>waktu</h6>
+                    <h6>tempat</h6>
+                </div>
+                <?php $this->load->view('/component/gmap') ?> 
             </div>
         </div>
     </div>
 </section>
-<?php $this->load->view('/component/gmap') ?>
-<?php $this->load->view('/component/countdown') ?>
-<?php $this->load->view('/component/videoplayer') ?>
+<?php
+    $data['items'] = [
+        [
+            'src' => 'https://cdn.pixabay.com/photo/2017/08/06/20/11/wedding-2595862_960_720.jpg',
+            'alt' => 'wedding1',
+            'active' => true
+        ],
+        [
+            'src' => 'https://cdn.pixabay.com/photo/2016/03/14/14/21/bride-1255520_960_720.jpg',
+            'alt' => 'wedding2',
+            'active' => false
+        ],
+        [
+            'src' => 'https://cdn.pixabay.com/photo/2016/11/18/18/32/wedding-1836315_960_720.jpg',
+            'alt' => 'wedding3',
+            'active' => false
+        ],
+    ];
+    $this->load->view('/component/carousel', $data) 
+?>
+<?php $this->load->view('/component/prokes'); ?>
+<?php $this->load->view('/component/modal'); ?>

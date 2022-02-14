@@ -33,11 +33,11 @@
                             <?php } ?>
                         </div>
                         <div class="carousel-inner">
-                            <?php foreach($items as $item) { ?>
-                            <div class="carousel-item <?php echo $item['active'] ? 'active' : '' ?>">
+                            <?php foreach($items as $item => $value) { ?>
+                            <div class="carousel-item <?php echo $item == 0 ? 'active' : '' ?>">
                                 <?php 
-                                    $carousel['src'] = $item['src'];
-                                    $carousel['alt'] = $item['alt'];
+                                    $carousel['src'] = $value;
+                                    $carousel['alt'] = 'picture'.($item + 1);
                                     $carousel['class'] = "d-block w-100";
                                     echo img($carousel) ?>
                                 <div class="carousel-caption d-none d-md-block">

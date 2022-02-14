@@ -32,7 +32,7 @@
                                     $home['width'] = 30;
                                     $home['class'] = 'd-block mx-auto';
 
-                                    echo img($home)
+                                    echo img($home);
                                 ?>
                                 <p class="text-center">home</p>
                             </div>
@@ -44,7 +44,7 @@
                                     $inlove['width'] = 30;
                                     $inlove['class'] = 'd-block mx-auto';
 
-                                    echo img($inlove)
+                                    echo img($inlove);
                                 ?>
                                 <p class="text-center">couple</p>
                             </div>
@@ -56,7 +56,7 @@
                                     $calendar['width'] = 30;
                                     $calendar['class'] = 'd-block mx-auto';
 
-                                    echo img($calendar)
+                                    echo img($calendar);
                                 ?>
                                 <p class="text-center">calendar</p>
                             </div>
@@ -68,7 +68,7 @@
                                     $gallery['width'] = 30;
                                     $gallery['class'] = 'd-block mx-auto';
 
-                                    echo img($gallery)
+                                    echo img($gallery);
                                 ?>
                                 <p class="text-center">gallery</p>
                             </div>
@@ -80,7 +80,7 @@
                                     $envelope['width'] = 30;
                                     $envelope['class'] = 'd-block mx-auto';
 
-                                    echo img($envelope)
+                                    echo img($envelope);
                                 ?>
                                 <p class="text-center">envelope</p>
                             </div>

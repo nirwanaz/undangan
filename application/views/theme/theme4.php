@@ -132,12 +132,13 @@
                 </div>
                 <div class="banner-couple p-4">
                     <?php
-                        echo heading(humanize('romeo'), 1, 'class="caption"');
-                        echo heading('&amp;'.humanize('_juliette'), 1, 'class="caption m-caption"');
+                        echo heading(humanize($bride_sname ? $bride_sname : 'juliette'), 1, 'class="caption"');
+                        echo heading('&amp;', 1, 'class="caption" style="margin-right: 80px"');
+                        echo heading(humanize($groom_sname ? $groom_sname : 'romeo'), 1, 'class="caption"');
                     ?>
                 </div>
                 <div class="banner-caption p-4">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p><?php echo sprintf('%s - %s', $date_event_wedding_start, $date_event_wedding_end); ?></p>
                 </div>
             </div>
         </div>
@@ -165,35 +166,30 @@
                             $decor['class'] = 'couple-img-decor';
                             
                             echo img($decor);
-                            echo heading(humanize('romeo'), 1, 'class="groom-name"')
+                            echo heading(humanize($groom_name, ' '), 1, 'class="groom-name"')
                         ?>
                     </div>
                     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Donec non dolor non felis rutrum consectetur quis in diam. 
-                        Curabitur sed ultricies velit.
-                    </p>
+                    <p><?php echo humanize(sprintf('putra dari bapak %s dan ibu %s', $groom_father_name, $groom_mother_name)) ?></p>
                 </div>
+                <!-- Mempelai Perempuan -->
                 <div class="bride p-4">
                     <div class="couple-wrapper">
                         <div class="img-bride">
                             <?php
-                                $groom['src'] = 'assets/image/girl-1848954_1920.jpg';
-                                $groom['alt'] = 'bride';
+                                $bride['src'] = 'assets/image/girl-1848954_1920.jpg';
+                                $bride['alt'] = 'bride';
                                 
-                                echo img($groom);
+                                echo img($bride);
                             ?>
                         </div>
                         <?php                           
                             echo img($decor);
-                            echo heading(humanize('juliette'), 1, 'class="bride-name"')
+                            echo heading(humanize($bride_name), 1, 'class="bride-name"')
                         ?>
                     </div>
                     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Donec non dolor non felis rutrum consectetur quis in diam. 
-                        Curabitur sed ultricies velit.
-                    </p>
+                    <p><?php echo humanize(sprintf('putri dari bapak %s dan ibu %s', $bride_father_name, $bride_mother_name)) ?></p>
                 </div>
             </div>
         </div>
@@ -217,34 +213,15 @@
                 </div>
                 <div class="event-content my-4">
                     <h4>resepsi</h4>
-                    <h6>tanggal</h6>
-                    <h6>waktu</h6>
-                    <h6>tempat</h6>
+                    <h6><i class="fa fa-calendar"></i>25-26 februari 2022</h6>
+                    <h6><i class="fa fa-time"></i>bebas</h6>
+                    <h6><i class="fa fa-locate"></i><?php echo $locate_event_wedding; ?></h6>
                 </div>
                 <?php $this->load->view('/component/gmap') ?> 
             </div>
         </div>
     </div>
 </section>
-<?php
-    $data['items'] = [
-        [
-            'src' => 'https://cdn.pixabay.com/photo/2017/08/06/20/11/wedding-2595862_960_720.jpg',
-            'alt' => 'wedding1',
-            'active' => true
-        ],
-        [
-            'src' => 'https://cdn.pixabay.com/photo/2016/03/14/14/21/bride-1255520_960_720.jpg',
-            'alt' => 'wedding2',
-            'active' => false
-        ],
-        [
-            'src' => 'https://cdn.pixabay.com/photo/2016/11/18/18/32/wedding-1836315_960_720.jpg',
-            'alt' => 'wedding3',
-            'active' => false
-        ],
-    ];
-    $this->load->view('/component/carousel', $data) 
-?>
+<?php $this->load->view('/component/carousel', array('items' => $album_items)); ?>
 <?php $this->load->view('/component/prokes'); ?>
 <?php $this->load->view('/component/modal'); ?>

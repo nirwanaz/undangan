@@ -193,7 +193,7 @@
                             $decor['class'] = 'couple-img-decor';
                             
                             echo img($decor);
-                            echo heading(humanize($groom_name, ' '), 1, 'class="groom-name"')
+                            echo heading(humanize($groom_name ? $groom_name : 'romeo'), 1, 'class="groom-name"')
                         ?>
                     </div>
                     
@@ -212,7 +212,7 @@
                         </div>
                         <?php                           
                             echo img($decor);
-                            echo heading(humanize($bride_name), 1, 'class="bride-name"')
+                            echo heading(humanize($bride_name ? $bride_name : 'juliette'), 1, 'class="bride-name"')
                         ?>
                     </div>
                     
@@ -242,7 +242,7 @@
                     <h4>resepsi</h4>
                     <h6><i class="fa-regular fa-calendar"></i>&nbsp;25-26 februari 2022</h6>
                     <h6><i class="fa-regular fa-clock"></i>&nbsp;bebas</h6>
-                    <h6><i class="fa-solid fa-location-dot"></i>&nbsp;<?php echo $locate_event_wedding; ?></h6>
+                    <h6><i class="fa-solid fa-location-dot"></i>&nbsp;<?php echo $locate_event_wedding ? $locate_event_wedding : 'london britania raya'; ?></h6>
                 </div>
                 <?php $this->load->view('/component/gmap') ?> 
             </div>

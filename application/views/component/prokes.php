@@ -12,7 +12,7 @@
 
                         echo img($covid);
                     ?>
-                    <h1>protokol kesehatan</h1>
+                    <h1 class="text-capitalize">protokol kesehatan</h1>
                 </div>
                 <div class="prokes-content my-4 p-4">
                     <p>untuk menaati kebijakan dari pemerintah guna mencegah penyebaran covid-19,

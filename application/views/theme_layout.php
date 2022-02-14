@@ -16,7 +16,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-        <audio id="Audio" hidden src="assets/audio/DJSODA-OKAY.mp3" type="audio/mpeg"></audio> 
         <script src="https://kit.fontawesome.com/d5d5a7466b.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -125,7 +124,8 @@
                         <div class="col-md" style="min-height: 125px;"></div>
                     </div>
                 </div>
-            </footer>        
+            </footer>
+            <audio id="Audio" hidden src="<?php echo base_url('assets/audio/DJSODA-OKAY.mp3') ?>" type="audio/mpeg"></audio>         
             <!-- Popper JS and Bootstrap JS -->
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

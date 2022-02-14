@@ -11,7 +11,7 @@
                             class="card-img-top">
                         <div class="card-body text-center">
                             <h5 class="card-title">...</h5>
-                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">buka undangan</button>
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="play()">buka undangan</button>
                         </div>
                     </div>
                 </div>

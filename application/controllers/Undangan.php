@@ -24,6 +24,8 @@ class undangan extends CI_Controller {
         $data['gmap_link_event_wedding'] = 'https://maps.app.goo.gl/nJNQjvGv4e13X56i7';
         $data['content'] = '/theme/theme4';
         $data['album_items'] = ['assets/image/LST_7528-min.jpg', 'assets/image/LST_7534-min.jpg', 'assets/image/LST_7569-min.jpg'];
+        $data['bank_name'] = 'mandiri';
+        $data['bank_no_account'] = '1780002278048';
 
         $this->load->view('theme_layout', $data);
     }

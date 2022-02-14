@@ -27,8 +27,34 @@
     }
 
     .banner-heading .title {
+        -webkit-animation: fade 4s infinite 1200ms;
+        animation : fade 4s infinite 1200ms;
         font-size: calc(1.325rem + 3vw);
         font-weight: 200;
+    }
+
+    @-webkit-keyframes fade {
+        0%{
+            opacity: 0.4;
+        }
+        40%{
+            opacity: 0.1;
+        }
+        80%{
+            opacity: 0.6
+        }
+    }
+
+    @keyframes fade {
+        0%{
+            opacity: 0.4;
+        }
+        50%{
+            opacity: 0.1;
+        }
+        100%{
+            opacity: 0.6
+        }
     }
 
     .banner-caption {
@@ -119,6 +145,7 @@
             font-size: calc(1.125rem + 1.2vw);
         }
     }
+
 </style>
 <section id="section-banner">
     <div class="container-fluid bg-banner">
@@ -195,7 +222,7 @@
         </div>
     </div>
 </section>
-<section class="section-event">
+<section id="section-event">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-6 p-4 my-4 text-center border border-2 rounded-3">
@@ -211,17 +238,20 @@
                     ?>
                     <h1>acara pernikahan</h1>
                 </div>
-                <div class="event-content my-4">
+                <div class="event-content my-4 text-capitalize">
                     <h4>resepsi</h4>
-                    <h6><i class="fa fa-calendar"></i>25-26 februari 2022</h6>
-                    <h6><i class="fa fa-time"></i>bebas</h6>
-                    <h6><i class="fa fa-locate"></i><?php echo $locate_event_wedding; ?></h6>
+                    <h6><i class="fa-regular fa-calendar"></i>&nbsp;25-26 februari 2022</h6>
+                    <h6><i class="fa-regular fa-clock"></i>&nbsp;bebas</h6>
+                    <h6><i class="fa-solid fa-location-dot"></i>&nbsp;<?php echo $locate_event_wedding; ?></h6>
                 </div>
                 <?php $this->load->view('/component/gmap') ?> 
             </div>
         </div>
     </div>
 </section>
+<section>
+</section>
 <?php $this->load->view('/component/carousel', array('items' => $album_items)); ?>
 <?php $this->load->view('/component/prokes'); ?>
 <?php $this->load->view('/component/modal'); ?>
+<?php $this->load->view('/component/gift'); ?>

@@ -1,4 +1,4 @@
-<section id="section-carousel">
+<section id="section-album">
     <div class="container">
         <div class="row">
             <div class="col-md py-4 my-4 text-center border border-2 rounded">
@@ -12,13 +12,14 @@
 
                         echo img($album);
                     ?>
-                    <h1>galeri foto</h1>
+                    <h1 class="text-capitalize">galeri foto</h1>
                 </div>
                 <div class="gallery-content my-4">
                     <div 
                         class="carousel slide" 
                         id="carouselCaptions"
                         data-bs-ride="carousel"
+                        data-bs-interval="3000"
                         >
                         <div class="carousel-indicators">
                             <?php foreach(range(0, sizeof($items) - 1) as $index) { ?>
@@ -47,28 +48,6 @@
                             </div>
                             <?php } ?>
                         </div>
-                        <button 
-                            class="carousel-control-prev" 
-                            type="button"
-                            data-bs-target="#carouselCaption"
-                            data-bs-slide="prev">
-                            <span 
-                                class="carousel-control-prev-icon"
-                                aria-hidden="true">
-                            </span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button 
-                            class="carousel-control-next" 
-                            type="button"
-                            data-bs-target="#carouselCaption"
-                            data-bs-slide="next">
-                            <span 
-                                class="carousel-control-next-icon"
-                                aria-hidden="true">
-                            </span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                 </div>
                 

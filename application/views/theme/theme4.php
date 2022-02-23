@@ -14,6 +14,10 @@
 
     }
 
+    .banner-couple{
+        position: relative;
+    }
+
     .m-caption {
         margin-top: -60px;
     }
@@ -146,8 +150,22 @@
         }
     }
 
+    .gallery {
+        text-align: center;
+    }
+
+    .prokes {
+        text-align: center;
+    }
+
+    .prokes-content .card img {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+    }
+
 </style>
-<section id="section-banner">
+<section id="section-banner" onscroll="flash()">
     <div class="container-fluid bg-banner">
         <div class="row">
             <div class="col-md-12 col-12 text-end p-4">
@@ -159,9 +177,9 @@
                 </div>
                 <div class="banner-couple p-4">
                     <?php
-                        echo heading(humanize($bride_sname ? $bride_sname : 'juliette'), 1, 'class="caption"');
-                        echo heading('&amp;', 1, 'class="caption" style="margin-right: 80px"');
                         echo heading(humanize($groom_sname ? $groom_sname : 'romeo'), 1, 'class="caption"');
+                        echo heading('&amp;', 1, 'class="caption" style="margin-right: 80px"');
+                        echo heading(humanize($bride_sname ? $bride_sname : 'juliette'), 1, 'class="caption"');
                     ?>
                 </div>
                 <div class="banner-caption p-4">
@@ -170,6 +188,14 @@
             </div>
         </div>
     </div>
+    <script>
+        function flash () {
+            $(".banner-couple")
+                .animate({opacity: 1, left: 0}, "slow");
+            $(".banner-couple")
+                .animate({opacity: 0, left: "200px"}, "slow");
+        }
+    </script>
 </section>
 
 <section id="section-profile" style="background-color: aliceblue;">
@@ -181,7 +207,7 @@
                     <div class="couple-wrapper">
                         <div class="img-groom">
                             <?php
-                                $groom['src'] = 'https://cdn.pixabay.com/photo/2019/10/10/18/51/smartphone-4540273_960_720.jpg';
+                                $groom['src'] = 'assets/image/profil/miftahul-profil.2.png';
                                 $groom['alt'] = 'groom';
                                 
                                 echo img($groom);
@@ -225,7 +251,7 @@
 <section id="section-event">
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-md-6 p-4 my-4 text-center border border-2 rounded-3">
+            <div class="col-md-6 p-4 my-4 text-center border border-2 rounded-3" style="background: aliceblue">
                 <div class="event-header">
                     <?php
                         $calender['src'] = 'assets/icons/feature/schedule.png';

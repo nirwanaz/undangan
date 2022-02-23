@@ -4,6 +4,9 @@
         <!-- meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="<?php echo sprintf('Undangan Pernikahan Digital %s dan $s', $groom_sname, $bride_sname)?> ">
+        <meta name="author" content="iniundanganmu.com">
+        <title><?php echo sprintf('%s&nbsp;&amp;&nbsp;%s', $groom_sname, $bride_sname) ?></title>
 
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -16,7 +19,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/d5d5a7466b.js" crossorigin="anonymous"></script>
+        <!-- Jquery 3.6 -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     </head>
     <body>
         <style>        
@@ -47,7 +56,7 @@
         <button id="playAudio" class="shadow"><i class='fa-solid fa-play'></i></button>
         
         <div class="main" style="width: 100%; overflow-x: hidden">
-            <nav class="navbar fixed-bottom navbar-light bg-light">
+            <nav class="navbar fixed-bottom navbar-light" style="background: aliceblue">
                 <div class="container">
                     <div class="w-100">
                         <div class="col-md-12">
@@ -62,7 +71,7 @@
 
                                         echo img($home);
                                     ?>
-                                    <p class="text-center">home</p>
+                                    <p class="text-center mb-0">beranda</p>
                                 </div>
                                 <div class="col-lg col b-ref" id="couple">
                                     <?php
@@ -74,7 +83,7 @@
 
                                         echo img($inlove);
                                     ?>
-                                    <p class="text-center">couple</p>
+                                    <p class="text-center mb-0">pasangan</p>
                                 </div>
                                 <div class="col-lg col b-ref" id="event">
                                     <?php
@@ -86,7 +95,7 @@
 
                                         echo img($calendar);
                                     ?>
-                                    <p class="text-center">calendar</p>
+                                    <p class="text-center mb-0">acara</p>
                                 </div>
                                 <div class="col-lg col b-ref" id="gallery">
                                     <?php
@@ -98,7 +107,7 @@
 
                                         echo img($gallery);
                                     ?>
-                                    <p class="text-center">gallery</p>
+                                    <p class="text-center mb-0">galeri</p>
                                 </div>
                                 <div class="col-lg col b-ref" id="envelope">
                                     <?php
@@ -110,7 +119,7 @@
 
                                         echo img($envelope);
                                     ?>
-                                    <p class="text-center">envelope</p>
+                                    <p class="text-center mb-0">amplop</p>
                                 </div>
                             </div>
                         </div>
@@ -121,41 +130,69 @@
             <footer>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md" style="min-height: 125px;"></div>
+                        <div class="col-md text-center p-4" style="min-height: 200px; background-color:honeydew; font-family:'Nunito Sans',sans-serif; font-weight:600"   >
+                            <p>created by iniundanganmu.com</p>
+                            <p>copyright&nbsp;&copy;<?php echo date("Y") ?></p>
+                            <ul class ='list-group list-group-horizontal justify-content-center'>
+                                <li class='list-group-item border-0'style="background-color:transparent">
+                                    <p>credit:</p> 
+                                </li>
+                                <li class='list-group-item border-0' style="background-color:transparent">
+                                    <a href ='https://flaticon.com/'>
+                                        <img 
+                                            class="img-fluid" 
+                                            src="<?php echo base_url('/assets/icons/footer/flaticon(2).png') ?>"
+                                            width="100"
+                                            height="100" 
+                                            style="object-position:0 -35px">
+                                    </a> 
+                                </li>
+                                 <li class='list-group-item border-0'style="background-color:transparent">
+                                    <a href ='https://flaticon.com/'>
+                                        <img 
+                                            class="img-fluid" 
+                                            src="<?php echo base_url('/assets/icons/footer/pixabay(1).png') ?>" 
+                                            width="100"
+                                            height="100" 
+                                            style="object-position:0 -35px">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </footer>
-            <audio id="Audio" hidden src="<?php echo base_url('assets/audio/DJSODA-OKAY.mp3') ?>" type="audio/mpeg"></audio>         
+            <audio id="Audio" hidden src="<?php echo base_url('assets/audio/budi-doremi-tolong.mp3') ?>" type="audio/mpeg"></audio>         
             <!-- Popper JS and Bootstrap JS -->
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
             <!-- Jquery 3.6 -->
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
             <script type="text/javascript">
                 $(window).on('load', function () {
                     $('#staticBackdrop').modal('show');
+
+                    function gotoSelectionPage (selectionElem) {
+                        selectionElem.scrollIntoView({behavior: "smooth"});
+                    }
+
+                    function addEventHandlerToNavbar (btnId, sectionId) {
+                        const btnTarget = document.getElementById(btnId);
+
+                        btnTarget.addEventListener("click", function () {
+                            sectionTarget = document.getElementById(sectionId);
+
+                            gotoSelectionPage(sectionTarget);
+                        })
+                    }
+
+                    addEventHandlerToNavbar('home', 'section-banner');
+                    addEventHandlerToNavbar('couple', 'section-profile');
+                    addEventHandlerToNavbar('event', 'section-event');
+                    addEventHandlerToNavbar('gallery', 'section-album');
+                    addEventHandlerToNavbar('envelope', 'section-gift');
                 })
 
-                $('#home').on('click', function () {
-                    window.location.href = '#section-banner';
-                })
-
-                $('#couple').on('click', function () {
-                    window.location.href = '#section-profile';
-                })
-
-                $('#event').on('click', function () {
-                    window.location.href = '#section-event';
-                })
-
-                $('#gallery').on('click', function () {
-                    window.location.href = '#section-album';
-                })
-
-                $('#envelope').on('click', function () {
-                    window.location.href = '#section-gift';
-                })
             </script>
             <script>
                 function play() {

@@ -3,7 +3,7 @@
     $map['link'] = $gmap_link_event_wedding ? $gmap_link_event_wedding : 'https://goo.gl/maps/SMLR327WvBMqTbrSA';
 ?>
 <section class="section-gmap">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md">
                 <div class="gmap-content">

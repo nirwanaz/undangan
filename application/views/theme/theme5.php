@@ -10,6 +10,7 @@
         background-image: url('/assets/image/arabes/1/bg-banner.JPG');
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
 
     .pad-center {
@@ -20,7 +21,7 @@
     .banner {
         text-align: center;
         color: whitesmoke;
-        font-family: 'Courgette', cursive;
+        font-family: 'Josefin Sans', sans-serif;
         font-style: normal;
     }
 
@@ -28,12 +29,16 @@
         text-transform: capitalize;
     }
 
-    .banner-header h1{
+    .banner-header h1 {
         font-size: calc(1.325rem + 5vw);
+        -webkit-text-stroke: 2px sandybrown;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 4px 4px darkorange;
     }
 
     .banner-header h2 {
         font-size: calc(1.125rem + 3vw);
+        text-shadow: 3px 3px cadetblue;
     }
 
     .banner-content-header {
@@ -44,6 +49,9 @@
 
     .banner-content-header h1 {
         font-size: calc(1.325rem + 6vw);
+        text-shadow: 4px 4px darkgoldenrod;
+        -webkit-text-stroke: 2px;
+        -webkit-text-fill-color: transparent;
     }
 
     .banner-content-body {
@@ -58,6 +66,8 @@
 
     .day-name h4, .date h4, .time h4 {
         font-size: calc(1.125rem + 2vw);
+        margin-top: 0.5rem;
+        margin-bottom: 0;
     }
 
     .banner-content-footer h4 {
@@ -81,7 +91,7 @@
         background-image: url('/assets/image/arabes/1/bg-banner.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        background-position-x: -350px;
+        background-position: center;
         transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
         -o-transform: rotate(180deg);
@@ -95,7 +105,6 @@
 
     .groom, .bride {
         position: relative;
-        font-family: 'Montserrat', sans-serif;
         font-weight: normal;
         font-style: normal;
         text-align: center;
@@ -171,13 +180,16 @@
     .event-content .card {
         background: rgba(224, 169, 92, 0.62); 
         border-radius: 5%;
-        box-shadow: 4px 8px 12px rgba(224, 169, 92, 0.42);
+        box-shadow: 4px 8px 12px #fbfbfb;
         padding: .5em;
+        margin-left: .5em;
+        margin-right: .5em;
     }
 
     .event-content-body .event-date {
         line-height: 10px;
         padding: 1rem;
+        text-transform: capitalize;
     }
 
     @media only screen and (max-width: 576px) {
@@ -272,6 +284,48 @@
         top: 0;
         z-index: -1;
     }
+
+    .gallery-content {
+        padding: 5%;
+    }
+
+    /* Style section gift */
+
+    .gift {
+        text-align: center;
+        color: whitesmoke;
+        position: relative;
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .gift::before {
+        content: "";
+        display: block;
+        background-image: url('/assets/image/arabes/1/bg-banner.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    .gift-content {
+        padding: 5%;
+    }
+
+    .gift-content .card {
+        border: 2px solid whitesmoke;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
 </style>
 <section id="section-banner">
     <div class="container-fluid">
@@ -319,48 +373,62 @@
                         <?php echo heading(humanize('profil_pasangan'), 1, 'class="section-title"') ?>
                     </div>
                     <div class="profile-content">
-                        <!-- mempelai pria -->
-                        <div class="groom p-4">
-                            <div class="couple-wrapper">
-                                <div class="img-groom">
-                                    <?php
-                                        $groom['src'] = 'assets/image/profile-user.png';
-                                        $groom['alt'] = 'groom';
-                                        
-                                        echo img($groom);
-                                    ?>
-                                </div>
-                                <?php
-                                    $decor['src'] = 'assets/image/arabes/frame.png';
-                                    $decor['alt'] = 'decor';
-                                    $decor['class'] = 'couple-img-decor';
+                        <div class="profile-content-header">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Sed in hendrerit neque. Donec in nibh vel est mattis aliquet.
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md">
+                                <!-- mempelai pria -->
+                                <div class="groom p-4">
+                                    <div class="couple-wrapper">
+                                        <div class="img-groom">
+                                            <?php
+                                                $groom['src'] = 'assets/image/profile-user.png';
+                                                $groom['alt'] = 'groom';
+                                                
+                                                echo img($groom);
+                                            ?>
+                                        </div>
+                                        <?php
+                                            $decor['src'] = 'assets/image/arabes/1/frame.png';
+                                            $decor['alt'] = 'decor';
+                                            $decor['class'] = 'couple-img-decor';
+                                            
+                                            echo img($decor);
+                                            echo heading(humanize($groom_name ? $groom_name : 'romeo'), 1, 'class="groom-name"')
+                                        ?>
+                                    </div>
                                     
-                                    echo img($decor);
-                                    echo heading(humanize($groom_name ? $groom_name : 'romeo'), 1, 'class="groom-name"')
-                                ?>
-                            </div>
-                            
-                            <p><?php echo humanize(sprintf('putra dari bapak %s dan ibu %s', $groom_father_name, $groom_mother_name)) ?></p>
-                        </div>
-                        <!-- Mempelai Perempuan -->
-                        <div class="bride p-4">
-                            <div class="couple-wrapper">
-                                <div class="img-bride">
-                                    <?php
-                                        $bride['src'] = 'assets/image/girl-1848954_1920.jpg';
-                                        $bride['alt'] = 'bride';
-                                        
-                                        echo img($bride);
-                                    ?>
+                                    <p><?php echo humanize(sprintf('putra dari bapak %s dan ibu %s', $groom_father_name, $groom_mother_name)) ?></p>
                                 </div>
-                                <?php                           
-                                    echo img($decor);
-                                    echo heading(humanize($bride_name ? $bride_name : 'juliette'), 1, 'class="bride-name"')
-                                ?>
                             </div>
-                            
-                            <p><?php echo humanize(sprintf('putri dari bapak %s dan ibu %s', $bride_father_name, $bride_mother_name)) ?></p>
+                            <div class="col-md">
+                                <!-- Mempelai Perempuan -->
+                                <div class="bride p-4">
+                                    <div class="couple-wrapper">
+                                        <div class="img-bride">
+                                            <?php
+                                                $bride['src'] = 'assets/image/girl-1848954_1920.jpg';
+                                                $bride['alt'] = 'bride';
+                                                
+                                                echo img($bride);
+                                            ?>
+                                        </div>
+                                        <?php                           
+                                            echo img($decor);
+                                            echo heading(humanize($bride_name ? $bride_name : 'juliette'), 1, 'class="bride-name"')
+                                        ?>
+                                    </div>
+                                    
+                                    <p><?php echo humanize(sprintf('putri dari bapak %s dan ibu %s', $bride_father_name, $bride_mother_name)) ?></p>
+                                </div>
+                            </div>
                         </div>
+                        
+                        
                     </div>
                     <!-- profile content end -->
                 </div>
@@ -434,3 +502,4 @@
 </section>
 <?php $this->load->view('/component/prokes') ?>
 <?php $this->load->view('/component/carousel', array('items'=>$album_items)) ?>
+<?php $this->load->view('/component/gift') ?>

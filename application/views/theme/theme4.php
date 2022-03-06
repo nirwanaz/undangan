@@ -152,16 +152,26 @@
 
     .gallery {
         text-align: center;
+        background-color: aliceblue;
+        padding: 5%;
     }
 
     .prokes {
         text-align: center;
+        background-color: aliceblue;
+        padding: 5%;
     }
 
     .prokes-content .card img {
         width: 200px;
         height: 200px;
         margin: auto;
+    }
+
+    .gift {
+        text-align: center;
+        background-color: aliceblue;
+        padding: 5%;
     }
 
 </style>

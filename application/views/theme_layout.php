@@ -22,6 +22,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/d5d5a7466b.js" crossorigin="anonymous"></script>
         <!-- Jquery 3.6 -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

@@ -6,6 +6,21 @@ class undangan extends CI_Controller {
     {
         parent::__construct();
         $this->load->helper(['html', 'inflector', 'date_helper']);
+        // Load Model
+        $this->load->model('Undangan_model');
+        $this->undangan = $this->Undangan_model;
+        $this->load->model('Wedding_model');
+        $this->wedding = $this->Wedding_model;
+        $this->load->model('Wedding_event_model');
+        $this->wedding_event = $this->Wedding_event_model;
+        $this->load->model('Wedding_place_model');
+        $this->wedding_place = $this->Wedding_place_model;
+        $this->load->model('Wedding_couple_model');
+        $this->wedding_couple = $this->Wedding_couple_model;
+        $this->load->model('Wedding_gallery_model');
+        $this->wedding_gallery = $this->Wedding_gallery_model;
+        $this->load->model('Wedding_music_model');
+        $this->wedding_music = $this->Wedding_music_model;
     }    
 
     function index() {
@@ -28,5 +43,21 @@ class undangan extends CI_Controller {
         $data['bank_no_account'] = '1780002278048';
 
         $this->load->view('theme_layout', $data);
+    }
+
+    private function get_wedding() {
+        return $this->wedding->read();
+    }
+
+    private function get_wedding_couple() {
+        return $this->wedding_couple->read();
+    }
+
+    private function get_wedding_event() {
+        return $this->wedding_event->read();
+    }
+
+    private function get_wedding_place() {
+        
     }
 }

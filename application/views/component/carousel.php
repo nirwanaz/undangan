@@ -15,7 +15,7 @@
                         ?>
                         <h1 class="text-capitalize">galeri foto</h1>
                     </div>
-                    <div class="gallery-content my-4">
+                    <div class="gallery-content">
                         <div 
                             class="carousel slide" 
                             id="carouselCaptions"

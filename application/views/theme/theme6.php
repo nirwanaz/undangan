@@ -110,8 +110,6 @@
         background-repeat: no-repeat;
         margin-left: -15px;
         margin-right: -15px;
-        -webkit-text-stroke: 1px;
-        -webkit-text-fill-color: transparent;
         font-family: 'Sawarabi Mincho', serif;
         padding-top: 5%;
         padding-bottom: 5%;
@@ -119,6 +117,8 @@
 
     .profile h1 {
         font-size: calc(1.325em + 4vw);
+        -webkit-text-stroke: 1px;
+        -webkit-text-fill-color: transparent;
     }
 
     .profile-content h5 {
@@ -131,6 +131,12 @@
 
     .profile-content {
         padding: 5%;
+    }
+
+    .groom img, .bride img {
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        box-shadow: 2px 4px 6px antiquewhite;
     }
 
     /* Style section event */
@@ -147,6 +153,12 @@
         font-family: 'Sawarabi Mincho', serif;
         padding-top: 5%;
         padding-bottom: 5%;
+    }
+
+    .event h1 {
+        font-size: calc(1.325em + 4vw);
+        -webkit-text-stroke: 1px;
+        -webkit-text-fill-color: transparent;
     }
 
     .event-content-body .card {
@@ -183,6 +195,113 @@
         .event-content-body .gmap-content iframe {
             height: 300px;
         }
+    }
+
+    /* Style section prokes */
+
+    .prokes{
+        text-align: center;
+        color: #ffff;
+        background: url('/assets/image/arabes/2/abstract-4752878_1920.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-left: -15px;
+        margin-right: -15px;
+        font-family: 'Sawarabi Mincho', serif;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .prokes h1 {
+        font-size: calc(1.325em + 4vw);
+        -webkit-text-stroke: 1px;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .prokes-header h1 {
+        text-align: center;
+        color: whitesmoke;
+    }
+
+    .prokes-content .card {
+       background: none !important;
+       border: 0 !important;
+    }
+
+    .prokes-content .card img {
+        height: 200px;
+        width: 200px;
+        margin: auto;
+        background: rgba(224, 169, 92, 0.62); 
+        box-shadow: 4px 8px 12px #fbfbfb;
+        padding: .5em;
+    }
+
+    @media only screen and (max-width: 576px) {
+        .prokes::before {
+            background-position: 0 !important;
+            background-repeat: repeat-y;
+            background-size: contain;
+        }
+    }
+
+    /* Style gallery section */
+
+    .gallery {
+        text-align: center;
+        color: #ffff;
+        background: url('/assets/image/arabes/2/abstract-4752875_1920.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-left: -15px;
+        margin-right: -15px;
+        font-family: 'Sawarabi Mincho', serif;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .gallery h1 {
+        font-size: calc(1.325em + 4vw);
+        -webkit-text-stroke: 1px;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .gallery-content {
+        padding: 5%;
+    }
+
+    /* Style section gift */
+
+    .gift {
+        text-align: center;
+        color: #ffff;
+        background: url('/assets/image/arabes/2/abstract-4752876_1920.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-left: -15px;
+        margin-right: -15px;
+        font-family: 'Sawarabi Mincho', serif;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .gift h1 {
+        font-size: calc(1.325em + 4vw);
+        -webkit-text-stroke: 1px;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .gift-content {
+        padding: 5%;
+    }
+
+    .gift-content .card {
+        box-shadow: 4px 6px 8px rgba(224, 169, 92, 0.62);
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 20px;
     }
 </style>
 <section id="section-banner">
@@ -239,27 +358,35 @@
                         </div>
                         <div class="profile-content-body">
                             <div class="row">
+                                <!-- Mempelai Pria -->
                                 <div class="col-md">
-                                    <?php
-                                        $groom['src'] = 'assets/image/couple.jpg';
-                                        $groom['alt'] = 'groom';
-                                        $groom['class'] = 'img-fluid';
+                                    <div class="groom">
+                                        <?php
+                                            $groom['src'] = 'https://cdn.pixabay.com/photo/2015/01/08/18/30/entrepreneur-593371_960_720.jpg';
+                                            $groom['alt'] = 'groom';
+                                            $groom['class'] = 'img-fluid';
 
-                                        echo img($groom);
-                                    ?>
-                                    <?php echo heading(humanize('romeo'), 5) ?>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nibh ut est rhoncus suscipit. </p>
+                                            echo img($groom);
+                                        ?>
+                                        <?php echo heading(humanize('romeo'), 5) ?>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nibh ut est rhoncus suscipit. </p>
+                                    </div>
+                                    
                                 </div>
+                                <!-- Mempelai Wanita -->
                                 <div class="col-md">
-                                    <?php
-                                        $groom['src'] = 'assets/image/couple.jpg';
-                                        $groom['alt'] = 'groom';
-                                        $groom['class'] = 'img-fluid';
+                                    <div class="bride">
+                                        <?php
+                                            $groom['src'] = 'https://cdn.pixabay.com/photo/2016/06/29/04/39/wedding-dresses-1486005_960_720.jpg';
+                                            $groom['alt'] = 'groom';
+                                            $groom['class'] = 'img-fluid';
 
-                                        echo img($groom);
-                                    ?>
-                                    <?php echo heading(humanize('romeo'), 5) ?>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nibh ut est rhoncus suscipit. </p>
+                                            echo img($groom);
+                                        ?>
+                                        <?php echo heading(humanize('juliette'), 5) ?>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nibh ut est rhoncus suscipit. </p>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -321,3 +448,6 @@
         </div>
     </div>                                
 </section>
+<?php $this->load->view('/component/prokes') ?>
+<?php $this->load->view('/component/carousel', array('items' => $album_items)) ?>
+<?php $this->load->view('/component/gift') ?>

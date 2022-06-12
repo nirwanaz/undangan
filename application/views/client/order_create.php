@@ -22,6 +22,7 @@
                 outline: none;
                 opacity: 0;
                 cursor: pointer;
+                transform: translateX(-50%);
             }
 
             .image-upload-wrap {
@@ -226,11 +227,17 @@
                             <li>Template</li>
                         </ul>
                         <!-- Fieldset -->
-                        <fieldset>
+                        <fieldset id="wedding-couple">
                             <h5 class="fs-title">Calon Mempelai Pria</h5>
                             <div class="file-upload groom">
                                 <div class="image-upload-wrap m-auto">
-                                    <input class="file-upload-input" type='file' name="groomImg" onchange="readURL(this);" accept="image/*" />
+                                    <input 
+                                        class="file-upload-input" 
+                                        type='file' 
+                                        name="groomImg" 
+                                        onchange="readURL(this);" 
+                                        accept="image/*" 
+                                        />
                                     <div class="drag-text">
                                         <h3>Pilih Foto Profil</h3>
                                     </div>
@@ -240,6 +247,10 @@
                             <div class="form-floating mb-2">
                                 <input type="text" class="form-control" name="groomName" placeholder="nama mempelai pria">
                                 <label for="groomName">Nama</label>
+                            </div>
+                            <div class="form-floating mb-2">
+                                <input type="text" class="form-control" name="groomSName" placeholder="nama panggilan">
+                                <label for="groomSName">Nama Panggilan</label>
                             </div>
                             <div class="form-floating mb-2">
                                 <input type="text" class="form-control" name="groomFatherName" placeholder="nama bapak">    
@@ -257,11 +268,17 @@
                                 <input type="button" name="next" class="next action-button" value="Selanjutnya"/>
                             </div>
                         </fieldset>
-                        <fieldset>
+                        <fieldset id="wedding-couple">
                             <h5 class="fs-title">Calon Mempelai Wanita</h5>
                             <div class="file-upload bride">
                                 <div class="image-upload-wrap m-auto">
-                                    <input class="file-upload-input" type='file' name="brideImg" onchange="readURL(this);" accept="image/*" />
+                                    <input 
+                                        class="file-upload-input" 
+                                        type='file' 
+                                        name="brideImg" 
+                                        onchange="readURL(this);" 
+                                        accept="image/*" 
+                                        />
                                     <div class="drag-text">
                                         <h3>Pilih Foto Profil</h3>
                                     </div>
@@ -271,6 +288,10 @@
                             <div class="form-floating mb-2">
                                 <input type="text" class="form-control" name="brideName" placeholder="nama mempelai wanita">
                                 <label for="brideName">Nama</label>
+                            </div>
+                            <div class="form-floating mb-2">
+                                <input type="text" class="form-control" name="brideSName" placeholder="nama panggilan">
+                                <label for="brideSName">Nama Panggilan</label>
                             </div>
                             <div class="form-floating mb-2">
                                 <input type="text" class="form-control" name="brideFatherName" placeholder="nama bapak">    
@@ -289,54 +310,52 @@
                                 <input type="button" name="next" class="next action-button" value="Selanjutnya"/>
                             </div>
                         </fieldset>
-                        <fieldset>
+                        <fieldset id="wedding-event">
                             <h5 class="fs-title">Acara Pernikahan</h5>
-                            <div class="form-floating mb-2">
-                                <input type="text" class="form-control" name="eventName" placeholder="nama acara">
-                                <label for="eventName">Nama</label>
+                            <div id="form-event">
+                                <h6 class="text-start mt-4">Informasi Acara</h6>
+                                <div class="form-floating mb-2">
+                                    <input type="text" class="form-control" name="eventName" placeholder="nama acara">
+                                    <label for="eventName">Nama</label>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <input type="date" class="form-control" name="eventDateStart" value="2022-02-02">
+                                    <label for="eventDateStart">Tanggal mulai</label>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <input type="date" class="form-control" name="eventDateEnd" value="2022-02-22">
+                                    <label for="eventDateEnd">Tanggal berakhir</label>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <input type="time" class="form-control" name="eventTimeStart">
+                                    <label for="eventTimeStart">Waktu mulai</label>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <input type="time" class="form-control" name="eventTimeEnd">
+                                    <label for="eventTimeEnd">Waktu berakhir</label>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <input type="text" class="form-control" name="eventLocate" placeholder="lokasi">
+                                    <label for="eventLocate">Lokasi</label>
+                                </div>
                             </div>
-                            <div class="form-floating mb-2">
-                                <input type="date" class="form-control" name="eventDate" placeholder="22/02/2002">
-                                <label for="eventDate">Tanggal</label>
-                            </div>
-                            <div class="form-floating mb-2">
-                                <input type="time" class="form-control" name="eventTimeStart">
-                                <label for="eventTimeStart">Waktu mulai</label>
-                            </div>
-                            <div class="form-floating mb-2">
-                                <input type="time" class="form-control" name="eventTimeEnd">
-                                <label for="eventTimeEnd">Waktu berakhir</label>
-                            </div>
-                            <div class="form-floating mb-2">
-                                <input type="text" class="form-control" name="eventLocate" placeholder="lokasi">
-                                <label for="eventLocate">Lokasi</label>
+                            <div class="mb-2">
+                                <button class="btn btn-primary" type="button" onclick="clone()">Tambah acara</button>
                             </div>
                             <div class="mb-2">
                                 <input type="button" name="previous" class="previous action-button-previous" value="Sebelumnya"/>
                                 <input type="button" name="next" class="next action-button" value="Selanjutnya"/>
                             </div>
                         </fieldset>
-                        <fieldset>
+                        <fieldset id="wedding-template">
                             <h5 class="fs-title">Template</h5>
                             <div class="form-floating mb-2">
-                                <input type="text" class="form-control" name="eventName" placeholder="nama acara">
+                                <input type="text" class="form-control" name="eventName[]" placeholder="nama acara">
                                 <label for="eventName">Nama</label>
                             </div>
                             <div class="form-floating mb-2">
-                                <input type="date" class="form-control" name="eventDate">
+                                <input type="date" class="form-control" name="eventDate[]">
                                 <label for="eventDate">Tanggal</label>
-                            </div>
-                            <div class="form-floating mb-2">
-                                <input type="time" class="form-control" name="eventTimeStart">
-                                <label for="eventTimeStart">Waktu mulai</label>
-                            </div>
-                            <div class="form-floating mb-2">
-                                <input type="time" class="form-control" name="eventTimeEnd">
-                                <label for="eventTimeEnd">Waktu berakhir</label>
-                            </div>
-                            <div class="form-floating mb-2">
-                                <input type="text" class="form-control" name="eventLocate" placeholder="lokasi">
-                                <label for="eventLocate">Lokasi</label>
                             </div>
                             <div class="mb-2">
                                 <input type="button" name="previous" class="previous action-button-previous" value="Sebelumnya"/>
@@ -370,6 +389,12 @@
                 $(e.previousElementSibling.children[1]).removeClass('d-none');
                 $(e.previousElementSibling).removeProp('style');
                 $(e).addClass('d-none');
+            }
+
+            function clone() {
+                let node = $('fieldset #form-event:last');
+
+                node.last().clone().insertAfter(node);
             }
 
         </script>
@@ -450,7 +475,56 @@
             });
 
             $(".submit").click(function(){
-                return false;
+                const fd = new FormData();
+
+                fd.append('groomImg', $('input[name="groomImg"]')[0].files[0]);
+                fd.append('groomName', $('input[name="groomName"]').val());
+                fd.append('groomSName', $('input[name="groomSName"]').val());
+                fd.append('groomFatherName', $('input[name="groomFatherName"]').val());
+                fd.append('groomMotherName', $('input[name="groomMotherName"]').val());
+                fd.append('groomAdditional', $('input[name="groomAdditional"]').val());
+  
+                fd.append('brideImg', $('input[name="brideImg"]')[0].files[0]);
+                fd.append('brideName', $('input[name="brideName"]').val());
+                fd.append('brideSName', $('input[name="brideSName"]').val());
+                fd.append('brideFatherName', $('input[name="brideFatherName"]').val());
+                fd.append('brideMotherName', $('input[name="brideMotherName"]').val());
+                fd.append('brideAdditional', $('input[name="brideAdditional"]').val());
+
+                // wedding event
+
+                $('input[name="eventName"]').each(function() {
+                    fd.append('eventNames[]', $(this).val())
+                })
+
+                $('input[name="eventDateStart"]').each(function() {
+                    fd.append('eventDateStarts[]', $(this).val())
+                })
+
+                $('input[name="eventDateEnd"]').each(function() {
+                    fd.append('eventDateEnds[]', $(this).val())
+                })
+
+                $('input[name="eventTimeStart"]').each(function() {
+                    fd.append('eventTimeStarts[]', $(this).val())
+                })
+
+                $('input[name="eventTimeEnd"]').each(function() {
+                    fd.append('eventTimeEnds[]', $(this).val())
+                })
+
+                $('input[name="eventLocate"]').each(function() {
+                    fd.append('eventLocates[]', $(this).val())
+                })
+
+                $.ajax({
+                    type: "post",
+                    url: "order/store",
+                    data: fd,
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                })
             })
         </script>
     </body>

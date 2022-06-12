@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Music_model extends CI_Model {
 
     private $_table = 'music';
-    public $key = 'id_music';
+    public $key = 'music_id';
     public $field = [];
 
     function __construct()
@@ -17,8 +17,12 @@ class Music_model extends CI_Model {
         return $this->_table;
     }
     
+    public function get_by_id($id) {
+        return $this->db->get_where($this->get_table_name(), array($this->key => $id))->result();
+    }
+
     public function read() {
-        return $this->db->get($this->get_table_name());
+        return $this->db->get($this->get_table_name())->result();
     }
 
     public function create() {

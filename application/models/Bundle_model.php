@@ -18,7 +18,7 @@ class Bundle_model extends CI_Model {
     }
     
     public function read() {
-        return $this->db->get($this->get_table_name());
+        return $this->db->get($this->get_table_name())->result();
     }
 
     public function create() {

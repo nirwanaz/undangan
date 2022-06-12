@@ -54,12 +54,14 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['theme/(:num)'] = 'theme/index/$1';
-$route['admin'] = function() {
-    header('location: admin/dashboard');
-};
+$route['admin'] = 'admin/admin';
+$route['admin/auth'] = 'admin/admin/auth';
+$route['admin/logout'] = 'admin/admin/logout';
 $route['admin/dashboard'] = 'admin/dashboard';
 $route['admin/order'] = 'admin/order';
 $route['admin/order/create'] = 'admin/order/create';
+$route['admin/music'] = 'admin/music';
+$route['admin/gift'] = 'admin/gift';
 
 // Route Client
 $route['order'] = 'order';

@@ -17,8 +17,12 @@ class Template_model extends CI_Model {
         return $this->_table;
     }
     
+    public function get_by_id($id) {
+        return $this->db->get_where($this->get_table_name(), array($this->key => $id))->result();
+    }
+
     public function read() {
-        return $this->db->get($this->get_table_name());
+        return $this->db->get($this->get_table_name())->result();
     }
 
     public function create() {
